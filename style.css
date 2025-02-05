@@ -1,0 +1,139 @@
+html {
+    font-size: 10px; /* Ora 1rem = 10px */
+}
+
+.main-container{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+
+    padding:3rem;
+    max-width: 60rem;
+    width: 90%;
+    
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+    /*0 → Nessun offset orizzontale.
+    2rem → Ombra spostata leggermente verso il basso.
+    3rem → Sfocatura più ampia per un effetto morbido.
+    rgba(0, 0, 0, 0.1) → Un'ombra molto leggera e diffusa.*/
+}
+
+body{
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    font-family: Work Sans, sans-serif;
+    font-size: 1.6rem;
+    color:hsl(292, 42%, 14%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header{
+    display: flex;
+}
+
+.icon-star{
+    background-image: url(assets/images/icon-star.svg);
+    background-repeat: no-repeat;
+    width: 5rem;
+    margin-top: 4rem;
+}
+
+h1{
+    margin-left: 2rem;
+    color:hsl(292, 42%, 14%);
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+p{
+    font-weight: 400;
+    margin-bottom:4rem;
+}
+
+h2{
+    display: flex;
+    justify-content: space-between; /* Sposta l'icona a destra */
+    align-items: center;
+    font-weight: 600;
+    font-size: 2rem;
+    cursor:pointer;
+    margin-right: 0px;
+}
+
+h2:hover{
+    color:hsl(292, 16%, 49%);
+}
+
+.hide{
+    display: none;
+}
+
+.add-icon{
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+    background-image: url(./assets/images/icon-plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.footer{
+    margin-top: auto;
+    height: 5rem;
+}
+.attribution { 
+    font-size: 1rem; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media(max-width:600px){
+    .main-container{
+        padding:2rem;
+        max-width: 29rem;
+        width: 100%;
+  
+        border-radius: 0.6rem;
+        margin-top: 2rem;
+    }
+    body{
+        background-image: url(assets/images/background-pattern-mobile.svg);
+        font-size: 0.8rem;
+    }
+    .icon-star{
+        width: 4rem;
+        margin-top: 3rem;
+    }
+    h1{
+        margin-top:2rem;
+        margin-bottom: 2rem;
+    }
+    h2{
+        display: flex;
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.2rem;
+        margin-bottom:4rem;
+    }
+    .add-icon{
+        margin-left: 0.2;
+        margin-right:0.2rem;
+
+    }
+}
